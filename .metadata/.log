@@ -26,3 +26,1150 @@ Binding(COMMAND+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.ide 4 4 2021-10-10 18:38:18.919
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Font.<init>(Font.java:138)
+	at org.eclipse.buildship.ui.internal.util.font.FontUtils.getDefaultDialogFont(FontUtils.java:34)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleDistributionGroup.createWidgets(GradleDistributionGroup.java:95)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleDistributionGroup.<init>(GradleDistributionGroup.java:86)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.createGradleDistributionGroup(GradleProjectSettingsComposite.java:100)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.<init>(GradleProjectSettingsComposite.java:66)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.<init>(GradleProjectSettingsComposite.java:38)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite$GradleProjectSettingsCompositeBuilder.build(GradleProjectSettingsComposite.java:253)
+	at org.eclipse.buildship.ui.internal.preferences.GradleWorkbenchPreferencePage.createContents(GradleWorkbenchPreferencePage.java:61)
+	at org.eclipse.jface.preference.PreferencePage.createControl(PreferencePage.java:244)
+	at org.eclipse.jface.preference.PreferenceDialog.createPageControl(PreferenceDialog.java:1433)
+	at org.eclipse.jface.preference.PreferenceDialog$8.run(PreferenceDialog.java:1196)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:1188)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:630)
+	at org.eclipse.jface.preference.PreferenceDialog$5.lambda$0(PreferenceDialog.java:660)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jface.preference.PreferenceDialog$5.selectionChanged(PreferenceDialog.java:657)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:818)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1191)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy$1.lambda$1(OpenStrategy.java:426)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4262)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3885)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.handlers.ShowPreferencePageHandler.execute(ShowPreferencePageHandler.java:58)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:195)
+	at org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler.runCommand(CocoaUIHandler.java:421)
+	at org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler.access$0(CocoaUIHandler.java:407)
+	at org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler$1.widgetSelected(CocoaUIHandler.java:281)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1522)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1545)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1530)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1324)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4310)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3883)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2021-10-10 18:38:18.921
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Font.<init>(Font.java:138)
+	at org.eclipse.buildship.ui.internal.util.font.FontUtils.getDefaultDialogFont(FontUtils.java:34)
+	at org.eclipse.buildship.ui.internal.util.widget.AdvancedOptionsGroup.<init>(AdvancedOptionsGroup.java:59)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.createAdvancedOptionsGroup(GradleProjectSettingsComposite.java:105)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.<init>(GradleProjectSettingsComposite.java:67)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.<init>(GradleProjectSettingsComposite.java:38)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite$GradleProjectSettingsCompositeBuilder.build(GradleProjectSettingsComposite.java:253)
+	at org.eclipse.buildship.ui.internal.preferences.GradleWorkbenchPreferencePage.createContents(GradleWorkbenchPreferencePage.java:61)
+	at org.eclipse.jface.preference.PreferencePage.createControl(PreferencePage.java:244)
+	at org.eclipse.jface.preference.PreferenceDialog.createPageControl(PreferenceDialog.java:1433)
+	at org.eclipse.jface.preference.PreferenceDialog$8.run(PreferenceDialog.java:1196)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:1188)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:630)
+	at org.eclipse.jface.preference.PreferenceDialog$5.lambda$0(PreferenceDialog.java:660)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jface.preference.PreferenceDialog$5.selectionChanged(PreferenceDialog.java:657)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:818)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1191)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy$1.lambda$1(OpenStrategy.java:426)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4262)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3885)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.handlers.ShowPreferencePageHandler.execute(ShowPreferencePageHandler.java:58)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:195)
+	at org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler.runCommand(CocoaUIHandler.java:421)
+	at org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler.access$0(CocoaUIHandler.java:407)
+	at org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler$1.widgetSelected(CocoaUIHandler.java:281)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1522)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1545)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1530)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1324)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4310)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3883)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2021-10-10 19:05:24.558 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_AR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/octaviodelsueldo/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/octaviodelsueldo/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 4 567 2021-10-10 19:05:35.572
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2021-10-10 19:05:35.572
+!MESSAGE Could not read metadata for 'HelloWorld'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/HelloWorld)[567]: java.lang.Exception: The project description file (.project) for 'HelloWorld' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:888)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:868)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:724)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1555)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2480)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2231)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:475)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:572)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:388)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:463)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2021-10-10 19:05:35.572
+!MESSAGE The project description file (.project) for 'HelloWorld' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!STACK 0
+java.lang.Exception: The project description file (.project) for 'HelloWorld' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:888)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:868)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:724)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1555)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2480)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2231)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:475)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:572)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:388)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:463)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.jface 2 0 2021-10-10 19:05:37.496
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-10-10 19:05:37.496
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5bccaedb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67784537,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.922
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.getModuleDescription(JarPackageFragmentRoot.java:307)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.923
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:47.930
+!MESSAGE Error indexing package names!
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.indexPackageNames(JavaSearchNameEnvironment.java:214)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:203)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.930
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.938
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.getModuleDescription(JarPackageFragmentRoot.java:307)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.950
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:47.964
+!MESSAGE Error indexing package names!
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.indexPackageNames(JavaSearchNameEnvironment.java:214)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:203)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.965
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.974
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.getModuleDescription(JarPackageFragmentRoot.java:307)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.974
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:47.981
+!MESSAGE Error indexing package names!
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.indexPackageNames(JavaSearchNameEnvironment.java:214)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:203)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.981
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.994
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.getModuleDescription(JarPackageFragmentRoot.java:307)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:47.995
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:48.003
+!MESSAGE Error indexing package names!
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.indexPackageNames(JavaSearchNameEnvironment.java:214)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:203)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.003
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.017
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.getModuleDescription(JarPackageFragmentRoot.java:307)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.017
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:48.029
+!MESSAGE Error indexing package names!
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.indexPackageNames(JavaSearchNameEnvironment.java:214)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:203)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.029
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.033
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.getModuleDescription(JarPackageFragmentRoot.java:307)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.033
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:48.037
+!MESSAGE Error indexing package names!
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.indexPackageNames(JavaSearchNameEnvironment.java:214)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:203)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.037
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.043
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.getModuleDescription(JarPackageFragmentRoot.java:307)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.043
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:48.049
+!MESSAGE Error indexing package names!
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.indexPackageNames(JavaSearchNameEnvironment.java:214)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:203)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.049
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.055
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.getModuleDescription(JarPackageFragmentRoot.java:307)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.055
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:48.060
+!MESSAGE Error indexing package names!
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.indexPackageNames(JavaSearchNameEnvironment.java:214)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:203)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.060
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.064
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.JarPackageFragmentRoot.getModuleDescription(JarPackageFragmentRoot.java:307)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.064
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:48.068
+!MESSAGE Error indexing package names!
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.indexPackageNames(JavaSearchNameEnvironment.java:214)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:203)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.068
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.082
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.083
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.092
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.092
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-10-10 19:07:48.100
+!MESSAGE JavaBuilder handling CoreException while building: javaimpatient
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaProject.getModuleDescription(JavaProject.java:3889)
+	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:134)
+	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:63)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:643)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:181)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:853)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:389)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:410)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:160)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.100
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.103
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.103
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.114
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.114
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.130
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.130
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.149
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.149
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.164
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.164
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.179
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.179
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.199
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.199
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+
+!ENTRY org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.215
+!MESSAGE Unexpected internal error
+!STACK 1
+Java Model Exception: Status ERROR: org.eclipse.jdt.core code=0 Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient' null
+	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:548)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:528)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:248)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:269)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getSourceModuleDescription(PackageFragmentRoot.java:911)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getModuleDescription(PackageFragmentRoot.java:904)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.addModuleClassPathInfo(JavaSearchNameEnvironment.java:298)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.mapToClassPathLocation(JavaSearchNameEnvironment.java:292)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.computeClasspathLocations(JavaSearchNameEnvironment.java:200)
+	at org.eclipse.jdt.internal.core.search.matching.JavaSearchNameEnvironment.<init>(JavaSearchNameEnvironment.java:94)
+	at org.eclipse.jdt.internal.core.search.matching.IndexBasedJavaSearchEnvironment.create(IndexBasedJavaSearchEnvironment.java:27)
+	at org.eclipse.jdt.internal.core.search.indexing.SourceIndexer.resolveDocument(SourceIndexer.java:169)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.resolveDocument(JavaSearchParticipant.java:117)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexResolvedDocument(IndexManager.java:662)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$2.execute(IndexManager.java:1285)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:432)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+!SUBENTRY 1 org.eclipse.jdt.core 4 0 2021-10-10 19:07:48.215
+!MESSAGE Build path contains duplicate entry: 'module-info.java' for project 'javaimpatient'
+!SESSION 2021-10-10 19:16:02.767 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_AR
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/octaviodelsueldo/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/Users/octaviodelsueldo/Documents/Java/java-basics/ -product org.eclipse.epp.package.java.product -keyring /Users/octaviodelsueldo/.eclipse_keyring
+
+!ENTRY org.eclipse.jface 2 0 2021-10-10 19:16:07.881
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-10-10 19:16:07.881
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6ffbf0ac,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ad5cffa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2021-10-10 19:17:04.954 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_AR
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/octaviodelsueldo/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data file:/Users/octaviodelsueldo/Documents/Java/java-basics/ -product org.eclipse.epp.package.java.product -keyring /Users/octaviodelsueldo/.eclipse_keyring
+
+!ENTRY org.eclipse.jface 2 0 2021-10-10 19:17:09.765
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-10-10 19:17:09.765
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d06801f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@727956bb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
