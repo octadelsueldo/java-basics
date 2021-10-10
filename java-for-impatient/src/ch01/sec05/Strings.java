@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Strings {
     public static void main(String[] args) {
         String location = "Java";
-        String greeting = "Hello " + location;
+        String greeting = "Hello " + location; // concatenacion
         System.out.println(greeting);
         int age = 42;
         String output = age + " years";
@@ -15,7 +15,7 @@ public class Strings {
         System.out.println("Next year, you will be " + age + 1); // Error
         System.out.println("Next year, you will be " + (age + 1)); // Ok
         
-        String names = String.join(", ", "Peter", "Paul", "Mary");
+        String names = String.join(", ", "Peter", "Paul", "Mary"); // Sets names to"Peter, Paul, Mary"
         System.out.println(names);
         
         // String builder
@@ -37,9 +37,9 @@ public class Strings {
         
         // Equality testing
         
-        System.out.println(location.equals("World"));
+        System.out.println(location.equals("World")); // equals sirve para comparar
         System.out.println(location == "World");
-        System.out.println(location.equalsIgnoreCase("world"));
+        System.out.println(location.equalsIgnoreCase("world")); // To compare two strings without regard to case, use the equalsIgnoreCase method
         System.out.println("word".compareTo("world"));
 
         // Converting between numbers and strings
@@ -47,6 +47,7 @@ public class Strings {
         String str = Integer.toString(n, 2);
         System.out.println(str);
         
+        // to convert a string containing an integer to the number, use the Integer.parseInt method
         n = Integer.parseInt(str);
         System.out.println(n);
         n = Integer.parseInt(str, 2);
