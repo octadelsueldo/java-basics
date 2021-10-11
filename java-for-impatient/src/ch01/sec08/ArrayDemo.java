@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class ArrayDemo {
     public static void main(String[] args) {
-        String[] names = new String[10];
+        String[] names = new String[10]; // Now names refers to an array with 10 elements, which you can access as
+         // names[0] ... names[9]
         for (int i = 0; i < names.length / 2; i++) {
             names[i] = "";
         }

@@ -55,7 +55,7 @@ public class Strings {
         double x = Double.parseDouble("3.14"); 
         System.out.println(x);
         
-        System.out.println(greeting.toUpperCase());
+        System.out.println(greeting.toUpperCase()); // returnsanewstring"HELLO, WORLD!"withoutchanginggreeting.
         System.out.println(greeting); // greeting is not changed
         
         // Unicode

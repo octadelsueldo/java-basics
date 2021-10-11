@@ -8,7 +8,7 @@ public class WhileDemo {
       int sum = 0;
       int count = 0;
       int target = 90;
-      while (sum < target) {
+      while (sum < target) { // While the sum is less than the target, the loop keeps executing.
          int next = generator.nextInt(10);
          sum = sum + next;
          count++;
