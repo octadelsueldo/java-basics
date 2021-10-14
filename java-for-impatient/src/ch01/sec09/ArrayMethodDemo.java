@@ -3,14 +3,15 @@ package ch01.sec09;
 import java.util.Arrays;
 
 public class ArrayMethodDemo {
+	// This method swaps two elements in an array:
     public static void swap(int[] values, int i, int j) {
         int temp = values[i];
         values[i] = values[j];
         values[j] = temp;
     }
-    
+    // This method returns an array consisting of the first and last values of a given array (which is not modified):
     public static int[] firstLast(int[] values) {
-        if (values.length == 0) return new int[0];
+        if (values.length == 0) return new int[0]; // return imprime el resultado
         else return new int[] { values[0], values[values.length - 1] };
     }
     

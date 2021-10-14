@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class StaticMethodDemo {
     public static double average(double x, double y) {
         double sum = x + y;
-        return sum / 2;
+        return sum / 2; // return el resultado
     }
     
     public static void main(String[] args) {
