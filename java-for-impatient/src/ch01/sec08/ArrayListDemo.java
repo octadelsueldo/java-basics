@@ -7,15 +7,23 @@ import java.util.List;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
+    	
+    	// ArrayList class is a generic class—a class with a type parameter
         ArrayList<String> friends = new ArrayList<>();
+        
+        // You can add elements to the end with the add method:
         friends.add("Peter");
         friends.add("Paul");
+        
+        // You can add and remove elements anywhere in the ArrayList
         friends.remove(1);
         friends.add(0, "Paul"); // Adds before index 0
         System.out.println("friends=" + friends);
         String first = friends.get(0);
         System.out.println("first=" + first);
         friends.set(1, "Mary");
+        
+        // The size method yields the current size of the list. Use the following loop to traverse all elements:
         for (int i = 0; i < friends.size(); i++) {
             System.out.println(friends.get(i));
         }
@@ -31,7 +39,7 @@ public class ArrayListDemo {
         
         friends = new ArrayList<>(List.of("Peter", "Paul", "Mary"));
         String[] names = friends.toArray(new String[0]);
-        System.out.println("names=" + Arrays.toString(names));               
+        System.out.println("names=" + Arrays.toString(names));   // The Arrays.toString method yields a string representation of an array.            
         
         ArrayList<String> moreFriends = new ArrayList<>(List.of(names));
         System.out.println("moreFriends=" + moreFriends);         
